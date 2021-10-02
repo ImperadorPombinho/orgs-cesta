@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Image, View, TouchableOpacity } from 'react-native';
+import Botao from '../../../components/Botao';
 import Texto from '../../../components/Texto';
 
 const Detalhes = ({nome, logoFazenda, nomeFazenda, descricao, preco, botao}) =>{
@@ -13,9 +14,7 @@ return(
             </View>
             <Texto style={estilos.descricao}>{descricao}</Texto>
             <Texto style={estilos.preco}>{preco}</Texto>
-            <TouchableOpacity style={estilos.botao} >
-                <Texto style={estilos.textoBotao} >{botao}</Texto>    
-            </TouchableOpacity>
+            <Botao style={[estilos.botao, estilos.textoBotao]}>{botao}</Botao>
     </>
 );
 
